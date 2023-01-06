@@ -17,6 +17,11 @@ with open(file_to_load) as election_data:
     headers=next(file_reader)
     print(headers)
 
+    #Print each row in CSV file.
+
+    for row in file_reader:
+        print(row)
+
 
 
 
