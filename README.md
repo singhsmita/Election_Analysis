@@ -189,13 +189,21 @@ Define a empty list of candidates and a dictionary of candidates votes .As we se
 -   Another use case would be if we have to run a report for multiple counties, states.
     
   county_list = []
+  
     county_votes = {}
+    
 	  if county_name not in county_list:
+	  
 	  #`4b: Add the existing county to the list of counties.`
+	  
         county_list.append(county_name)
+	
    `# 4c: Begin tracking the county's vote count`.
+   
            county_votes[county_name] = 0
+	   
             # `5: Add a vote to that county's vote count.`
+	    
            county_votes[county_name] += 1
 
  
