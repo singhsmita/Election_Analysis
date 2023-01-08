@@ -157,74 +157,48 @@ Few of the business use cases of this code are as follows:-
 
 -   We can use the script in a scenario where we have many candidates running for the elections.
     
-
-  
-
 candidate_options = []
 
 candidate_votes = {}
 
-  
-
 candidate_name = row[2]
 
-  
-
-    # 3: Extract the county name from each row.
-
+ # 3: Extract the county name from each row.
 county_name = row[1]
 
-  
-
-    # If the candidate does not match any existing candidate add it to
+     # If the candidate does not match any existing candidate add it to
     
     # the candidate list
 
     if candidate_name not in candidate_options:
 
-  
-
-    # Add the candidate name to the candidate list.
+   # Add the candidate name to the candidate list.
     
     candidate_options.append(candidate_name)
 
-  
-
-    # And begin tracking that candidate's voter count.
+   # And begin tracking that candidate's voter count.
     
     candidate_votes[candidate_name] = 0
     
-      
-    
-    # Add a vote to that candidate's count
+     # Add a vote to that candidate's count
 
     candidate_votes[candidate_name] += 1
 
-  
-  
-
 Define a empty list of candidates and a dictionary of candidates votes .As we see the candidate_name can be read from the given row,in this case row[2].We can have any number of candidates and using the conditional statement we can calculate votes for the each candidate without having to make any modifications.
-
-  
 
 -   Another use case would be if we have to run a report for multiple counties, states.
     
-
-  
-
-    county_list = []
+  county_list = []
     county_votes = {}
 	  if county_name not in county_list:
-	 
-   #`4b: Add the existing county to the list of counties.`
+	  #`4b: Add the existing county to the list of counties.`
         county_list.append(county_name)
    `# 4c: Begin tracking the county's vote count`.
            county_votes[county_name] = 0
             # `5: Add a vote to that county's vote count.`
            county_votes[county_name] += 1
 
-  
-
+ 
 Declaring an empty county list and an empty dictionary for county votes,we can calculate total votes for each county.
 
 The similar can be done if we declare list of states/cities and dictinonaries of votes for states/cities.
